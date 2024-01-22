@@ -1,16 +1,16 @@
+use crate::{LitematicModuleData, NbtModuleData, SchemModuleData};
+
 use fastnbt::Value;
 
-use crate::parse_module::{LitematicModuleData, NbtModuleData, SchemModuleData};
-
 #[derive(Default)]
-pub struct Block {
-    name: String,
-    id: String,
-    pos: Vec<i32>,
-    signal: i32,
+pub struct UnifiedBlock {
+    pub name: String,
+    pub id: String,
+    pub pos: Vec<i32>,
+    pub signal: i32,
 }
 
-impl Block {
+impl UnifiedBlock {
     pub fn new() -> Self {
         Self {
             name: String::new(),

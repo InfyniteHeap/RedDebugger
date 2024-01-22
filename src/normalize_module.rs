@@ -1,9 +1,8 @@
-use std::ops::Deref;
-
 use fastnbt::Value;
 
 use crate::parse_module::{LitematicModuleData, NbtModuleData, SchemModuleData};
 
+#[derive(Default)]
 pub struct Block {
     name: String,
     id: String,

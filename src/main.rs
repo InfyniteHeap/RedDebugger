@@ -3,7 +3,6 @@ mod normalize_module;
 mod parse_module;
 
 pub use module::{litematic::LitematicModuleData, nbt::NbtModuleData, schem::SchemModuleData};
-pub use normalize_module::UnifiedBlock;
 
 use parse_module::{parse_litematic_file, parse_nbt_file, parse_schem_file};
 

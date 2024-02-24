@@ -3,6 +3,7 @@ use crate::Module;
 use std::borrow::Cow;
 
 use fastnbt::Value;
+use red_runtime::RedstoneComponent;
 use serde::Deserialize;
 
 #[derive(Deserialize, Debug)]
@@ -23,6 +24,7 @@ pub struct LitematicModuleData<'a> {
 }
 
 impl Module for LitematicModuleData<'_> {}
+impl RedstoneComponent for LitematicModuleData<'_> {}
 
 #[derive(Deserialize, Debug)]
 pub struct MetaData<'a> {

@@ -10,15 +10,15 @@ incremental = true
 opt-level = 1
 
 [profile.release]
-incremental = true
+strip = true
 lto = "fat"
 panic = "abort"
 
 [dependencies]
-anyhow = "1.0.79"
+anyhow = "1.0.80"
 fastnbt = "2.4.4"
 flate2 = "1.0.28"
 fs-err = "2.11.0"
 petgraph = "0.6.4"
 red_runtime = { path = "./crate/RedRuntime" }
-serde = { version = "1.0.195", features = ["derive"] }
+serde = { version = "1.0.197", features = ["derive"] }

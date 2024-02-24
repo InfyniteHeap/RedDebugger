@@ -3,6 +3,7 @@ use crate::Module;
 use std::{borrow::Cow, collections::HashMap};
 
 use fastnbt::{ByteArray, IntArray, Value};
+use red_runtime::RedstoneComponent;
 use serde::Deserialize;
 
 #[derive(Deserialize, Debug)]
@@ -37,6 +38,7 @@ pub struct SchemModuleData<'a> {
 }
 
 impl Module for SchemModuleData<'_> {}
+impl RedstoneComponent for SchemModuleData<'_> {}
 
 #[derive(Deserialize, Debug)]
 pub struct MetaData {

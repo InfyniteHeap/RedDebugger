@@ -2,6 +2,7 @@ use crate::Module;
 
 use std::{borrow::Cow, collections::HashMap};
 
+use red_runtime::RedstoneComponent;
 use serde::Deserialize;
 
 #[derive(Deserialize, Debug)]
@@ -14,6 +15,7 @@ pub struct NbtModuleData<'a> {
 }
 
 impl Module for NbtModuleData<'_> {}
+impl RedstoneComponent for NbtModuleData<'_> {}
 
 #[derive(Deserialize, Debug)]
 pub struct Palette<'a> {

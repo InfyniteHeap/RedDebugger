@@ -1,12 +1,9 @@
-use crate::Module;
-
 use std::borrow::Cow;
 
 use fastnbt::Value;
-use red_runtime::RedstoneComponent;
 use serde::Deserialize;
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize)]
 pub struct LitematicModuleData<'a> {
     #[serde(rename = "Version")]
     pub version: i32,
@@ -23,10 +20,7 @@ pub struct LitematicModuleData<'a> {
     pub regions: Value,
 }
 
-impl Module for LitematicModuleData<'_> {}
-impl RedstoneComponent for LitematicModuleData<'_> {}
-
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize)]
 pub struct MetaData<'a> {
     #[serde(rename = "Author")]
     pub author: Cow<'a, str>,
@@ -51,7 +45,7 @@ pub struct MetaData<'a> {
     pub enclosing_size: Size,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize)]
 pub struct Size {
     pub x: i32,
     pub y: i32,

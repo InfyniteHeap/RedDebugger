@@ -1,12 +1,9 @@
-use crate::Module;
-
 use std::{borrow::Cow, collections::HashMap};
 
 use fastnbt::{ByteArray, IntArray, Value};
-use red_runtime::RedstoneComponent;
 use serde::Deserialize;
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize)]
 pub struct SchemModuleData<'a> {
     #[serde(rename = "Version")]
     pub version: i32,
@@ -37,10 +34,7 @@ pub struct SchemModuleData<'a> {
     pub block_entities: Vec<Value>,
 }
 
-impl Module for SchemModuleData<'_> {}
-impl RedstoneComponent for SchemModuleData<'_> {}
-
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize)]
 pub struct MetaData {
     #[serde(rename = "WEOffsetX")]
     pub we_offset_x: i32,
@@ -50,10 +44,10 @@ pub struct MetaData {
     pub we_offset_z: i32,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize)]
 pub struct Palette<'a>(HashMap<Cow<'a, str>, i32>);
 
-// #[derive(Deserialize, Debug)]
+// #[derive(Deserialize)]
 // pub struct Entity<'a> {
 //     #[serde(rename = "Id")]
 //     pub id: Cow<'a, str>,

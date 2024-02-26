@@ -6,11 +6,7 @@ pub use module::{litematic::LitematicModuleData, nbt::NbtModuleData, schem::Sche
 
 use parse_module::{parse_litematic_file, parse_nbt_file, parse_schem_file};
 
-use std::fmt::Debug;
-
 use fs_err as fs;
-
-pub trait Module: Debug {}
 
 fn main() -> anyhow::Result<()> {
     loop {
